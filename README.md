@@ -4,7 +4,7 @@ This is my final project for the seminar Network Games and Mechanism Design for 
 
 This repository contains:
 - Two adjacency matrices from the FRM (data/)
-- [A jupyter script will all the code](https://github.com/ANGELMAN-J/Network-Games-and-Mechanism-Design-SS19/blob/master/Controllability%20of%20Financial%20Networks%20-%20Minimum%20Input%20Set.ipynb)
+- [A jupyter script with all the code](https://github.com/ANGELMAN-J/Network-Games-and-Mechanism-Design-SS19/blob/master/Controllability%20of%20Financial%20Networks%20-%20Minimum%20Input%20Set.ipynb)
 - Plot outputs
 - [PDF of the slides for my presentation](https://github.com/ANGELMAN-J/Network-Games-and-Mechanism-Design-SS19/blob/master/20190628%20Network%20Games%20and%20Mechanism%20Design.pdf)
 
