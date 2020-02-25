@@ -6,29 +6,30 @@ This is my final project for the seminar Network Games and Mechanism Design for 
 
 We start with an adjacency matrix and convert it to a graph. We cluster the 100 institutions by sector for visualisation purposes. Then, we would like to obtain the Minimum Input / Driver Node set. To do this, we do the following steps.
 <p float="left">
-  <img src="plots_adj_matrix_2008_10_17/adj_matrix_heatmap_binary.png" width="200" />
-  <img src="plots_adj_matrix_2008_10_17/complex_graph_positions_labels.png" width="280" /> 
+  <img src="Readme_media/adj_matrix_heatmap_binary.png" width="300" />
+  <img src="Readme_media/complex_graph_positions_labels.png" width="350" /> 
 </p>
 
 1. Obtain corresponding bipartite graph of the original DiGraph. The "In"-set is at the bottom, the "Out"-set is at the top.
-<img src="plots_adj_matrix_2008_10_17/complex_graph_bipartite_representation.png" width="550" />
+<img src="Readme_media/complex_graph_bipartite_representation.png" width="550" />
 
 
 
 2. Find a maximum matching of this bipartite graph. Just like the Minimum Input / Driver Node set, the maximum matching is not necessarily unique. Thus, we use maximum weight matching, to make a principled selection from the set of possible solutions.
 
-<img src="plots_adj_matrix_2008_10_17/matching_bipartite_representation.png" width="550" /> 
+<img src="Readme_media/matching_moive.gif" width="550" /> 
+<img src="Readme_media/matching_bipartite_representation.png" width="550" /> 
 
 3. Find the unmatched nodes of the "In"-set of the bipartite graph (colored red), which are one possible Minimum Input / Driver Node set.
 
 <p float="left">
-  <img src="plots_adj_matrix_2008_10_17/minimum_input_set_bipartite_representation.png" width="550" />
+  <img src="Readme_media/minimum_input_set_bipartite_representation.png" width="550" />
 </p>
 
 4. Project the found Minimum Input / Driver Node set back to the original graph.
 
 <p float="left">
-  <img src="plots_adj_matrix_2008_10_17/MIS_complex_graph_positions_labels.png" width="550" />
+  <img src="Readme_media/MIS_complex_graph_positions_labels.png" width="750" />
 </p>
 
 ## Background
