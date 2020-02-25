@@ -17,7 +17,7 @@ We start with an adjacency matrix and convert it to a graph. We cluster the 100 
 
 2. Find a maximum matching of this bipartite graph. Just like the Minimum Input / Driver Node set, the maximum matching is not necessarily unique. Thus, we use maximum weight matching, to make a principled selection from the set of possible solutions.
 
-<img src="Readme_media/matching_moive.gif" width="550" /> 
+<img src="Readme_media/matching_movie.gif" width="550" /> 
 <img src="Readme_media/matching_bipartite_representation.png" width="550" /> 
 
 3. Find the unmatched nodes of the "In"-set of the bipartite graph (colored red), which are one possible Minimum Input / Driver Node set.
@@ -26,10 +26,10 @@ We start with an adjacency matrix and convert it to a graph. We cluster the 100 
   <img src="Readme_media/minimum_input_set_bipartite_representation.png" width="550" />
 </p>
 
-4. Project the found Minimum Input / Driver Node set back to the original graph.
+4. Project the found Minimum Input / Driver Node set back to the original graph. The Minimum Input / Driver Node set contains more than half of all nodes but some of those nodes have no outbound edges. Thus, they do not appear to affect the risk of any other institution - thus, we can remove them from our set and end up with 21 relevant nodes in the Minimum Input / Driver Node set.
 
 <p float="left">
-  <img src="Readme_media/MIS_complex_graph_positions_labels.png" width="750" />
+  <img src="Readme_media/relevantMIS_complex_graph_positions_labels.png" width="750" />
 </p>
 
 ## Background
