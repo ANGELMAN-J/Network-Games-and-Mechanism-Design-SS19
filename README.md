@@ -33,16 +33,16 @@ We start with an adjacency matrix and convert it to a graph. We cluster the 100 
 
 ## Background
 
-The dataset on quantile regression of daily returns of financial institutions. The idea is that to capture risk for a given institution, we are not interested in knowing how its returns are generally related to the returns of all the other institutions, but instead we are interested how its worst returns (in this case, lowest 5%) are related to the other institutions.
+The input data is the result of a quantile lasso regression of daily returns of financial institutions. The idea is that to capture risk for a given institution, we are not interested in knowing how its returns are generally related to the returns of all the other institutions, but instead we are interested how its worst returns (in this case, lowest 5%) are related to the other institutions. The LASSO (L1-penalty) performs feature selection by forcing many coefficients to 0.
 
-For each timestep, we do a quantile lasso regression for each institutions of all the other institutions, which gives us n-1 coefficients plus an intercept per institutions. We use 100 institutions, and thus have a 100x100 matrix for each timestep. We interpret this as an adjacency matrix to obtain a directed graph for each timestep.
+For each timestep, we do a quantile lasso regression for each institution on all the other institutions, which gives us n models (one per institution) with n-1 coefficients plus an intercept. We use 100 institutions, and thus have a 100x100 matrix for each timestep. We interpret this as an adjacency matrix to obtain a directed graph for each timestep. This timeseries of 100x100 matrices is very hard to interpret and the hope is that graph theory might help to make sense of it.
 
 Controllability is an interesting concept from network science. For instance, it has been applied to [identify essential motor neurons in the brain of a worm](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5710776/), i.e. the neurons that are essential drivers of the worm's movement. The question of this project was whether it can also be used to identify the key drivers of risk in the financial sector. Those could then be, for instance, be monitored especially strictly by regulators.
 
 
 ## Takeaways
 
-As our graphs are relatively sparse (refer to the adjacency matrix heatmap, LASSO forces many coefficients to 0, which is desired in this case), our Minimum Input / Driver Node set has many members - which makes it harder to interpret. Furthermore, the Minimum Input / Driver Node set does not take edge weights into account. Thus, the interpretation of the results is still not straightforward.
+As the graphs are relatively sparse (refer to the adjacency matrix heatmap, LASSO forces many coefficients to 0, which is desired in this case), our Minimum Input / Driver Node set has many members - which makes it harder to interpret. Furthermore, the Minimum Input / Driver Node set does not take edge weights into account. Thus, the interpretation of the results is still not straightforward.
 
 
 This repository contains:
